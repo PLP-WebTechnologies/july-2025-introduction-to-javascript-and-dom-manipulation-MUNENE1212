@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Personal Task Manager</h1>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div>Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div>Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div>Pending</div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Add New Task</h2>
+            <input type="text" id="taskInput" placeholder="Enter your task...">
+            <select id="prioritySelect">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div style="margin: 20px 0;">
+            <button onclick="showAllTasks()">All Tasks</button>
+            <button onclick="showCompletedTasks()">Completed</button>
+            <button onclick="showPendingTasks()">Pending</button>
+            <button onclick="clearCompletedTasks()">Clear Completed</button>
+            <button onclick="sortTasksByPriority()">Sort by Priority</button>
+        </div>
+
+        <div id="taskList">
+            <p>No tasks yet. Add one above to get started!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
